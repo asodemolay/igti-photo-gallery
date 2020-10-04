@@ -1,0 +1,66 @@
+:host {
+  display: block;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+}
+
+.gallery-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.img-container {
+  overflow: hidden;
+  width: 500px;
+  height: 300px;
+}
+
+.img-container img {
+  max-width: 500px;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-preferred-size: content;
+      flex-basis: content;
+}
+
+li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 8px;
+}
+
+li span {
+  font-size: 2em;
+}
+
+.material-icons {
+  cursor: pointer;
+}
+/*# sourceMappingURL=gallery.component.css.map */

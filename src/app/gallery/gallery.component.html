@@ -1,0 +1,57 @@
+<span class="title">{{ title }}</span>
+<ng-container [ngSwitch]="photos">
+  <div *ngSwitchCase="null" class="gallery-container">
+    <span style="text-align: center">No photos to display</span>
+  </div>
+  <div *ngSwitchDefault class="gallery-container">
+    <div
+      [style.backgound-image]="photos[current - 1]"
+      class="image-gallery"
+    ></div>
+    <div class="img-container">
+      <img [src]="photos[current - 1]" />
+    </div>
+    <hr />
+    <ul>
+      <li>
+        <input
+          type="button"
+          [disabled]="current == 1"
+          (click)="navigateGallery(1)"
+          class="material-icons"
+          value="first_page"
+        />
+      </li>
+      <li>
+        <input
+          type="button"
+          [disabled]="current == 1"
+          (click)="navigateGallery(current - 1)"
+          class="material-icons"
+          value="chevron_left"
+        />
+      </li>
+      <li>
+        <span>Photo {{ current }} of {{ photos.length }}</span>
+      </li>
+      <li>
+        <input
+          type="button"
+          [disabled]="current == photos.length"
+          (click)="navigateGallery(current + 1)"
+          class="material-icons"
+          value="chevron_right"
+        />
+      </li>
+      <li>
+        <input
+          type="button"
+          [disabled]="current == photos.length"
+          (click)="navigateGallery(photos.length)"
+          class="material-icons"
+          value="last_page"
+        />
+      </li>
+    </ul>
+  </div>
+</ng-container>

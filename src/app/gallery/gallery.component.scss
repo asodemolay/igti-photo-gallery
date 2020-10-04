@@ -1,0 +1,46 @@
+:host {
+  display: block;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-container {
+  overflow: hidden;
+
+  width: 500px;
+  height: 300px;
+
+  img {
+    max-width: 500px;
+  }
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  flex-basis: content;
+}
+li {
+  display: flex;
+  margin: 8px;
+
+  span {
+    font-size: 2em;
+  }
+}
+.material-icons {
+  cursor: pointer;
+}
